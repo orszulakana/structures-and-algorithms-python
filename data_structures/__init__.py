@@ -3,12 +3,12 @@ from data_structures.Stack import *
 Stack = Stack()
 
 for i in range(0, 10):
-    Stack.Push(i)
+    Stack.push(i)
 
-length = Stack.Size()
+length = Stack.size()
 print('Stack size: ', length)
 
 print('Elements on stack :')
 for i in range(length):
-    print(Stack.Top())
-    Stack.Pop()
+    print(Stack.peak())
+    Stack.pop()

@@ -2,26 +2,31 @@ class Stack:
 
     # constructor
     def __init__(self):
-        self.Stack = []
+        self.stack = []
 
     # add element
-    def Push(self, element):
-        self.Stack.append(element)
+    def push(self, element):
+        self.stack.append(element)
 
     # remove element
-    def Pop(self):
-        self.Stack.pop(len(self.Stack) - 1)
-
-    # stack size
-    def Size(self):
-        return len(self.Stack)
+    def pop(self):
+        if self.is_empty():
+            return None
+        else:
+            self.stack.pop(len(self.stack) - 1)
 
     # get last element
-    def Top(self):
-        return self.Stack[len(self.Stack) - 1]
+    def peak(self):
+        if self.is_empty():
+            return None
+        else:
+            return self.stack[len(self.stack) - 1]
 
-    def Empty(self):
-        if len(self.Stack) == 0:
+    def size(self):
+        return len(self.stack)
+
+    def is_empty(self):
+        if len(self.stack) == 0:
             return True
         else:
             return False
